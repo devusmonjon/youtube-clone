@@ -1,15 +1,19 @@
-import '@fontsource/roboto/300.css';
-import '@fontsource/roboto/400.css';
-import '@fontsource/roboto/500.css';
-import '@fontsource/roboto/700.css';
+import { Routes, Route } from "react-router-dom";
+import { Box } from "@mui/material";
+import { Main, Channel, VideoDetail, Search } from "../../components";
 
 import "./app.css";
 
 const App = () => {
   return (
-    <div>
-      Hello world!
-    </div>
+    <Box>
+      <Routes>
+        <Route path="/" element={<Main />} />
+        <Route path="/channel/:slug" element={<Channel />} />
+        <Route path="/video/:slug" element={<VideoDetail />} />
+        <Route path="/search/:query" element={<Search />} />
+      </Routes>
+    </Box>
   )
 }
 
