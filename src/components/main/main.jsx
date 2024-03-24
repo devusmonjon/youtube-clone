@@ -1,6 +1,5 @@
 import { Box, Container, Stack, Typography } from '@mui/material'
 import { useEffect, useState } from 'react'
-import { Link } from 'react-router-dom'
 
 import { colors } from "../../constants/colors"
 import { Videos, Category } from '../'
@@ -15,13 +14,14 @@ const Main = () => {
   useEffect(() => {
     const getData = async () => {
       try {
-        const data = await ApiService.fetching("search");
+        const data = await ApiService.fetching(`search?part=snippet&q=${selectedCategory}`);
+        console.log(data);
         setVideos(data);
       } catch (err) {
         console.log(err);
       }
-    }
 
+    }
     getData();
 
     // ApiService.fetching("search").then(data => setVideos(data))
