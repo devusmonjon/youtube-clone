@@ -25,7 +25,7 @@ const Main = () => {
     getData();
 
     // ApiService.fetching("search").then(data => setVideos(data))
-  }, [])
+  }, [selectedCategory])
 
   return (
         <Stack>

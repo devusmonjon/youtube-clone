@@ -17,8 +17,8 @@ const Category = ({ selectedCategoryHandler, selectedCategory }) => {
                 }}
             onClick={() => selectedCategoryHandler(item.name)}>
                 <span style={{
-                    color: colors.secondary,
-                    marginRight: "15px", color: selectedCategory === item.name && "#ffffff"
+                    color: selectedCategory === item.name && "#ffffff",
+                    marginRight: "15px",
                     }}>{item.icon}</span>
                 <span style={{ opacity: "1", color: selectedCategory === item.name && "#ffffff" }}>{item.name}</span>
             </button>
