@@ -17,8 +17,8 @@ const Main = () => {
                 const data = await ApiService.fetching(
                     `search?part=snippet&q=${selectedCategory}`,
                 );
-                console.log(data);
-                setVideos(data);
+                // console.log(data);
+                setVideos(data.items);
             } catch (err) {
                 console.log(err);
             }
